@@ -24,9 +24,7 @@
 #define Setting 3
 #define Navi 4
 
-
-//#include "keymap_behaviors.dtsi"
-//#include "keymap_macros.dtsi"
+/ {
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
@@ -99,4 +97,5 @@
 						&trans			&trans				&trans				&trans		&trans		&trans		&trans			&trans						&trans					&trans
             >;
       };
+};
 
