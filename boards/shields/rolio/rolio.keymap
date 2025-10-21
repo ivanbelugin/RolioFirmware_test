@@ -27,7 +27,20 @@
 
 #include "keymap_behaviors.dtsi"
 #include "keymap_macros.dtsi"
+/ {
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
 
+        tri-layer {
+            if-layers = <1 2>;
+            then-layer = <3>;
+        };
+
+        tri-layer1 {
+            if-layers = <4 1>;
+            then-layer = <3>;
+        };
+    };
 / {
 
     keymap {
@@ -44,7 +57,7 @@
             >;
         };
 
-        windows_default_layer {
+        Lower_layer {
             display-name = "Lower";
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp LEFT RIGHT>;
             bindings = <
@@ -66,7 +79,7 @@
             >;
         };
 
-        windows_symbols_layer {
+        Setting_layer {
             display-name = "Setting";
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp LEFT RIGHT>;
             bindings = <
@@ -77,7 +90,7 @@
             >;
         };
 
-        numpad_layer {
+        Navi_layer {
             display-name = "Navi";
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp LEFT RIGHT>;
             bindings = <
